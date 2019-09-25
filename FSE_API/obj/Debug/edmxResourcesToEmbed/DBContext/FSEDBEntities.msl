@@ -12,8 +12,8 @@
     <EntitySetMapping Name="Projects">
       <EntityTypeMapping TypeName="FSEModel.Project">
         <MappingFragment StoreEntitySet="Project">
+          <ScalarProperty Name="Project_Name" ColumnName="Project_Name" />
           <ScalarProperty Name="Project_ID" ColumnName="Project_ID" />
-          <ScalarProperty Name="Project1" ColumnName="Project" />
           <ScalarProperty Name="Start_Date" ColumnName="Start_Date" />
           <ScalarProperty Name="End_Date" ColumnName="End_Date" />
           <ScalarProperty Name="Priority" ColumnName="Priority" />
@@ -23,10 +23,11 @@
     <EntitySetMapping Name="Tasks">
       <EntityTypeMapping TypeName="FSEModel.Task">
         <MappingFragment StoreEntitySet="Task">
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Task_Name" ColumnName="Task_Name" />
           <ScalarProperty Name="Task_ID" ColumnName="Task_ID" />
           <ScalarProperty Name="Parent_ID" ColumnName="Parent_ID" />
           <ScalarProperty Name="Project_ID" ColumnName="Project_ID" />
-          <ScalarProperty Name="Task1" ColumnName="Task" />
           <ScalarProperty Name="Start_Date" ColumnName="Start_Date" />
           <ScalarProperty Name="End_Date" ColumnName="End_Date" />
           <ScalarProperty Name="Priority" ColumnName="Priority" />
@@ -41,8 +42,6 @@
           <ScalarProperty Name="First_Name" ColumnName="First_Name" />
           <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
           <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
-          <ScalarProperty Name="Task_ID" ColumnName="Task_ID" />
-          <ScalarProperty Name="Project_ID" ColumnName="Project_ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -52,6 +51,14 @@
           <ScalarProperty Name="Error_Date" ColumnName="Error_Date" />
           <ScalarProperty Name="Error_Description" ColumnName="Error_Description" />
           <ScalarProperty Name="Error_Message" ColumnName="Error_Message" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tests">
+      <EntityTypeMapping TypeName="FSEModel.Test">
+        <MappingFragment StoreEntitySet="Test">
+          <ScalarProperty Name="Test_Data" ColumnName="Test_Data" />
           <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>

@@ -30,5 +30,6 @@ namespace FSE_API.DBContext
         public virtual DbSet<Task> Tasks { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Error> Errors { get; set; }
+        public virtual DbSet<Test> Tests { get; set; }
     }
 }

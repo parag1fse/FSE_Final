@@ -19,6 +19,7 @@ using FSE_API.Results;
 
 namespace FSE_API.Controllers
 {
+    [Obsolete]
     [Authorize]
     [RoutePrefix("api/Account")]
     public class AccountController : ApiController

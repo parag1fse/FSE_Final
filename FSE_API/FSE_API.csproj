@@ -279,6 +279,9 @@
     <Compile Include="DBContext\Task.cs">
       <DependentUpon>FSEDBEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="DBContext\Test.cs">
+      <DependentUpon>FSEDBEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="DBContext\User.cs">
       <DependentUpon>FSEDBEntities.tt</DependentUpon>
     </Compile>

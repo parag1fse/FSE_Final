@@ -35,7 +35,7 @@ namespace FSE_API.Tests.Controllers
             projects.Add(new Project
             {
                 Project_ID = 1,
-                Project1 = "Test",
+                Project_Name = "Test",
                 Start_Date = DateTime.Now,
                 End_Date = DateTime.Now,
                 Priority = 1

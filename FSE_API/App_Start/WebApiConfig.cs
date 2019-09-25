@@ -6,6 +6,7 @@ using System.Web.Http;
 using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
 using System.Web.Http.Cors;
+using Newtonsoft.Json.Converters;
 
 namespace FSE_API
 {
@@ -29,6 +30,9 @@ namespace FSE_API
             // Enable CORS for the Angular App
             var cors = new EnableCorsAttribute("http://localhost:4200", "*", "*");
             config.EnableCors(cors);
+
+            config.Formatters.JsonFormatter.SerializerSettings.Converters.Add(
+                             new IsoDateTimeConverter() { DateTimeFormat = "mm/dd/yyyy" });
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

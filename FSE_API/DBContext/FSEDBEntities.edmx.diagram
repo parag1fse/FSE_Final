@@ -11,9 +11,9 @@
         <EntityTypeShape EntityType="FSEModel.User" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
         <AssociationConnector Association="FSEModel.FK__Task__Parent_ID__1920BF5C" ManuallyRouted="false" />
         <AssociationConnector Association="FSEModel.FK__Task__Project_ID__1A14E395" ManuallyRouted="false" />
-        <AssociationConnector Association="FSEModel.FK__Users__Project_I__1DE57479" ManuallyRouted="false" />
-        <AssociationConnector Association="FSEModel.FK__Users__Task_ID__1CF15040" ManuallyRouted="false" />
         <EntityTypeShape EntityType="FSEModel.Error" Width="1.5" PointX="3.375" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FSEModel.Test" Width="1.5" PointX="5.375" PointY="4.75" />
+        <AssociationConnector Association="FSEModel.FK__Task__User_ID__6E01572D" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

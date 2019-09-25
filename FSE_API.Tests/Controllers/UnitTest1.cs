@@ -35,7 +35,7 @@ namespace FSE_API.Controllers.Tests
             tasks.Add(new Task
             {
                 Project_ID = 1,
-                Task1 = "Test",
+                Task_Name = "Test",
                 Start_Date = DateTime.Now,
                 End_Date = DateTime.Now,
                 Priority = 1,

@@ -46,7 +46,7 @@ namespace FSE_API.Controllers
                     new TaskModel()
                     {
                         Project_ID = b.Project_ID,
-                        Task_Name = b.Task1,
+                        Task_Name = b.Task_Name,
                         Start_Date = b.Start_Date,
                         End_Date = b.End_Date,
                         Priority = (int)b.Priority,
@@ -88,7 +88,7 @@ namespace FSE_API.Controllers
                 var taskdto = new TaskModel()
                 {
                     Project_ID = task.Project_ID,
-                    Task_Name = task.Task1,
+                    Task_Name = task.Task_Name,
                     Start_Date = task.Start_Date,
                     End_Date = task.End_Date,
                     Priority = (int)task.Priority,
@@ -108,6 +108,37 @@ namespace FSE_API.Controllers
             }
         }
 
+        [Route("api/projectTasks/{i:int}")]
+        [HttpGet]
+        public HttpResponseMessage GetProjectTask(int i)
+        {
+            try
+            {
+                var task = repository.Get().FindAll(b => (int)b.Project_ID == i).Select(b =>
+                   new TaskModel()
+                   {
+                       Project_ID = b.Project_ID,
+                       Task_Name = b.Task_Name,
+                       Start_Date = b.Start_Date,
+                       End_Date = b.End_Date,
+                       Priority = (int)b.Priority,
+                       ParentTask_Name = b.ParentTask == null ? "" : b.ParentTask.Parent_Task,
+                       Parent_ID = b.Parent_ID,
+                       Task_ID = b.Task_ID,
+                       Status = b.Status
+                   });
+
+                return ToJson(task);
+            }
+            catch (Exception ex)
+            {
+                LogError.Log(ex);
+                return ToJson(null);
+            }
+        }
+
+        [Route("api/tasks")]
+        [HttpPost]
         public HttpResponseMessage Post([FromBody]Task value)
         {
             try
@@ -122,6 +153,8 @@ namespace FSE_API.Controllers
 
         }
 
+        [Route("api/endtask/{id:int}")]
+        [HttpPut]
         public HttpResponseMessage Put(int id, [FromBody]Task value)
         {
             try

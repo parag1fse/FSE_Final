@@ -85,7 +85,6 @@ C:\PROD_SUPP\SOAP Requests\FSE\FSE_API\FSE_API\bin\Microsoft.Owin.Security.Googl
 C:\PROD_SUPP\SOAP Requests\FSE\FSE_API\FSE_API\bin\Microsoft.Owin.Security.Twitter.xml
 C:\PROD_SUPP\SOAP Requests\FSE\FSE_API\FSE_API\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\PROD_SUPP\SOAP Requests\FSE\FSE_API\FSE_API\bin\System.Web.Http.Owin.xml
-C:\PROD_SUPP\SOAP Requests\FSE\FSE_API\FSE_API\obj\Debug\FSE_API.csprojResolveAssemblyReference.cache
 C:\PROD_SUPP\SOAP Requests\FSE\FSE_API\FSE_API\obj\Debug\FSE_API.dll
 C:\PROD_SUPP\SOAP Requests\FSE\FSE_API\FSE_API\obj\Debug\FSE_API.pdb
 C:\PROD_SUPP\SOAP Requests\FSE\FSE_API\FSE_API\bin\System.Web.Cors.dll

@@ -14,14 +14,18 @@ namespace FSE_API.DBContext
     
     public partial class User
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public User()
+        {
+            this.Tasks = new HashSet<Task>();
+        }
+    
         public int User_ID { get; set; }
         public string First_Name { get; set; }
         public string Last_Name { get; set; }
         public Nullable<int> Employee_ID { get; set; }
-        public Nullable<int> Task_ID { get; set; }
-        public Nullable<int> Project_ID { get; set; }
     
-        public virtual User Project { get; set; }
-        public virtual Task Task { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Task> Tasks { get; set; }
     }
 }
