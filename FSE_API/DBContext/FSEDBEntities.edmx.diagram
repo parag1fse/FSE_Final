@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1270a391a80d451facba233e319abd81" Name="Diagram1">
+        <EntityTypeShape EntityType="FSEModel.ParentTask" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FSEModel.Project" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FSEModel.Task" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="FSEModel.User" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <AssociationConnector Association="FSEModel.FK__Task__Parent_ID__1920BF5C" ManuallyRouted="false" />
+        <AssociationConnector Association="FSEModel.FK__Task__Project_ID__1A14E395" ManuallyRouted="false" />
+        <AssociationConnector Association="FSEModel.FK__Users__Project_I__1DE57479" ManuallyRouted="false" />
+        <AssociationConnector Association="FSEModel.FK__Users__Task_ID__1CF15040" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="FSEModel.Error" Width="1.5" PointX="3.375" PointY="5.75" IsExpanded="true" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
